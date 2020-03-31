@@ -14,6 +14,10 @@
 		B4041C2C23CEEB7A00D8A807 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4041C2B23CEEB7A00D8A807 /* Assets.xcassets */; };
 		B4041C2F23CEEB7A00D8A807 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4041C2E23CEEB7A00D8A807 /* Preview Assets.xcassets */; };
 		B4041C3223CEEB7A00D8A807 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4041C3023CEEB7A00D8A807 /* LaunchScreen.storyboard */; };
+		B46AE00823D6B65200986410 /* MenuContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46AE00723D6B65200986410 /* MenuContent.swift */; };
+		B484C85223D6D06100949002 /* NewClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B484C85123D6D06100949002 /* NewClient.swift */; };
+		B48650622403B24A002D1D32 /* modelClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48650612403B24A002D1D32 /* modelClient.swift */; };
+		B49C1D0323E920F400367209 /* DBconnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49C1D0223E920F400367209 /* DBconnector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,11 @@
 		B4041C2E23CEEB7A00D8A807 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B4041C3123CEEB7A00D8A807 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B4041C3323CEEB7A00D8A807 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4041C3923CEEBA700D8A807 /* iis.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iis.entitlements; sourceTree = "<group>"; };
+		B46AE00723D6B65200986410 /* MenuContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuContent.swift; sourceTree = "<group>"; };
+		B484C85123D6D06100949002 /* NewClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewClient.swift; sourceTree = "<group>"; };
+		B48650612403B24A002D1D32 /* modelClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = modelClient.swift; sourceTree = "<group>"; };
+		B49C1D0223E920F400367209 /* DBconnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBconnector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +67,12 @@
 		B4041C2123CEEB7800D8A807 /* iis */ = {
 			isa = PBXGroup;
 			children = (
+				B48650682403C892002D1D32 /* coreDataObject */,
+				B49C1D0023E920AC00367209 /* func */,
+				B46AE00523D6B61D00986410 /* page */,
+				B4041C3923CEEBA700D8A807 /* iis.entitlements */,
 				B4041C2223CEEB7800D8A807 /* AppDelegate.swift */,
 				B4041C2423CEEB7800D8A807 /* SceneDelegate.swift */,
-				B4041C2923CEEB7800D8A807 /* ContentView.swift */,
 				B4041C2B23CEEB7A00D8A807 /* Assets.xcassets */,
 				B4041C3023CEEB7A00D8A807 /* LaunchScreen.storyboard */,
 				B4041C3323CEEB7A00D8A807 /* Info.plist */,
@@ -76,6 +88,48 @@
 				B4041C2E23CEEB7A00D8A807 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B46AE00523D6B61D00986410 /* page */ = {
+			isa = PBXGroup;
+			children = (
+				B46AE00923D6BC7300986410 /* NewClient */,
+				B46AE00623D6B63000986410 /* MainPage */,
+			);
+			path = page;
+			sourceTree = "<group>";
+		};
+		B46AE00623D6B63000986410 /* MainPage */ = {
+			isa = PBXGroup;
+			children = (
+				B4041C2923CEEB7800D8A807 /* ContentView.swift */,
+				B46AE00723D6B65200986410 /* MenuContent.swift */,
+			);
+			path = MainPage;
+			sourceTree = "<group>";
+		};
+		B46AE00923D6BC7300986410 /* NewClient */ = {
+			isa = PBXGroup;
+			children = (
+				B484C85123D6D06100949002 /* NewClient.swift */,
+			);
+			path = NewClient;
+			sourceTree = "<group>";
+		};
+		B48650682403C892002D1D32 /* coreDataObject */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = coreDataObject;
+			sourceTree = "<group>";
+		};
+		B49C1D0023E920AC00367209 /* func */ = {
+			isa = PBXGroup;
+			children = (
+				B49C1D0223E920F400367209 /* DBconnector.swift */,
+				B48650612403B24A002D1D32 /* modelClient.swift */,
+			);
+			path = func;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,8 +205,12 @@
 			files = (
 				B4041C2323CEEB7800D8A807 /* AppDelegate.swift in Sources */,
 				B4041C2823CEEB7800D8A807 /* iis.xcdatamodeld in Sources */,
+				B49C1D0323E920F400367209 /* DBconnector.swift in Sources */,
 				B4041C2A23CEEB7800D8A807 /* ContentView.swift in Sources */,
+				B484C85223D6D06100949002 /* NewClient.swift in Sources */,
+				B46AE00823D6B65200986410 /* MenuContent.swift in Sources */,
 				B4041C2523CEEB7800D8A807 /* SceneDelegate.swift in Sources */,
+				B48650622403B24A002D1D32 /* modelClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +346,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = iis/iis.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"iis/Preview Content\"";
 				DEVELOPMENT_TEAM = Q57V8JNV46;
 				ENABLE_PREVIEWS = YES;
@@ -299,6 +359,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = tw.thinkingsoftware.iis;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -308,7 +369,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = iis/iis.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"iis/Preview Content\"";
 				DEVELOPMENT_TEAM = Q57V8JNV46;
 				ENABLE_PREVIEWS = YES;
@@ -319,6 +382,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = tw.thinkingsoftware.iis;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
